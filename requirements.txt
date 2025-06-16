@@ -1,0 +1,21 @@
+# 3D World Bank Indicators Visualization Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core visualization libraries
+plotly>=5.15.0
+dash>=2.14.1
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Data processing and country mapping
+pycountry>=23.12.11
+requests>=2.31.0
+
+# Enhanced data analysis
+scipy>=1.11.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Development and testing (optional)
+jupyter>=1.0.0
+ipywidgets>=8.0.0
