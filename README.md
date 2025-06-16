@@ -64,28 +64,33 @@ An interactive 3D web application for exploring World Bank development indicator
    cd WDI_3d
    ```
 
-2. **Install dependencies**:
+2. **Download large data files** (required for Git LFS):
+   ```bash
+   git lfs pull
+   ```
+
+3. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **World Bank Data** (✅ **INCLUDED**):
+4. **World Bank Data** (✅ **INCLUDED with Git LFS**):
    - All required World Bank WDI CSV files are included in the repository
-   - No additional downloads needed - data is ready to use!
+   - Large files (197MB + 75MB) managed with Git LFS for efficient downloads
    - Files included:
-     - `WDICSV.csv` (main data file - 197MB)
+     - `WDICSV.csv` (main data file - 197MB) 📦 Git LFS
      - `WDICountry.csv` (country metadata)
      - `WDISeries.csv` (indicator metadata)
      - `WDIseries-time.csv` (time series metadata)
-     - `WDIfootnote.csv` (footnotes)
+     - `WDIfootnote.csv` (footnotes - 75MB) 📦 Git LFS  
      - `WDIcountry-series.csv` (country-series metadata)
 
-4. **Run the application**:
+5. **Run the application**:
    ```bash
    python main_app.py
    ```
 
-5. **Open your browser** and navigate to: `http://127.0.0.1:8050/`
+6. **Open your browser** and navigate to: `http://127.0.0.1:8050/`
 
 ## 📁 Project Structure
 
@@ -227,7 +232,12 @@ python main_app.py
    pip install -r requirements.txt
    ```
 
-2. **App startup issues**:
+2. **"File not found" or empty CSV files**:
+   - Ensure Git LFS is installed: `git lfs install`
+   - Download large files: `git lfs pull`
+   - Verify files are downloaded: `ls -la WDI*.csv`
+
+3. **App startup issues**:
    - Ensure all dependencies are installed: `pip install -r requirements.txt`
    - Check that you're in the correct directory
    - Verify Python version is 3.8 or higher
