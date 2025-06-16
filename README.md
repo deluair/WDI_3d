@@ -69,11 +69,11 @@ An interactive 3D web application for exploring World Bank development indicator
    pip install -r requirements.txt
    ```
 
-3. **Download World Bank Data**:
-   - Visit [World Bank Open Data](https://datacatalog.worldbank.org/search/dataset/0037712)
-   - Download the "World Development Indicators" CSV files
-   - Place the following files in the project root directory:
-     - `WDICSV.csv` (main data file)
+3. **World Bank Data** (✅ **INCLUDED**):
+   - All required World Bank WDI CSV files are included in the repository
+   - No additional downloads needed - data is ready to use!
+   - Files included:
+     - `WDICSV.csv` (main data file - 197MB)
      - `WDICountry.csv` (country metadata)
      - `WDISeries.csv` (indicator metadata)
      - `WDIseries-time.csv` (time series metadata)
@@ -101,11 +101,18 @@ WDI_3d/
 ├── 📄 requirements.txt         # Python dependencies
 ├── 📄 QUICK_START.md           # Quick start guide
 ├── 📄 README.md                # This file
+├── 📄 LICENSE                  # MIT License
+├── 📄 .gitignore               # Git exclusions
 ├── 📄 test_fix.py              # Error handling tests
 ├── 📄 test_workflow.py         # Workflow validation tests
 ├── 📄 final_test.py            # Complete validation suite
 ├── 📁 processed_data/          # Cached processed data (auto-created)
-└── 📁 WDI CSV files/           # World Bank data files
+├── � WDICSV.csv              # ✅ World Bank main data (197MB)
+├── 📊 WDICountry.csv          # ✅ Country metadata
+├── 📊 WDISeries.csv           # ✅ Indicator metadata
+├── 📊 WDIseries-time.csv      # ✅ Time series metadata
+├── 📊 WDIfootnote.csv         # ✅ Data footnotes
+└── 📊 WDIcountry-series.csv   # ✅ Country-series metadata
 ```
 
 ## 🔧 Usage
@@ -220,9 +227,10 @@ python main_app.py
    pip install -r requirements.txt
    ```
 
-2. **"File not found" errors**:
-   - Ensure WDI CSV files are in the project root
-   - Check file names match exactly (case-sensitive)
+2. **App startup issues**:
+   - Ensure all dependencies are installed: `pip install -r requirements.txt`
+   - Check that you're in the correct directory
+   - Verify Python version is 3.8 or higher
 
 3. **"No data available" messages**:
    - Try different years (recent years have better coverage)

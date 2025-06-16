@@ -121,10 +121,12 @@ Thumbs.db
 
 # Project specific
 processed_data/
-*.csv
 .pytest_cache/
 temp/
 tmp/
+
+# World Bank Data Files - Allow the main WDI files
+!WDI*.csv
 
 # Dash app cache
 assets/cache/
